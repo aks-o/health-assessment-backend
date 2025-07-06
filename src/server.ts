@@ -9,7 +9,7 @@ import imageRoutes from './routes/imageRoutes';
 import AppDataSource from './ormconfig';
 import { encryptionMiddleware } from './middleware/encryptionMiddleware';
 import testEncryptionRouter from './routes/testEncryptionRoute';
-import doctorRoutes from './routes/DoctorRoutes';
+import doctorRoutes from './routes/doctorRoutes';
 import areaRoutes from './routes/areaRoutes';
 
 dotenv.config();
