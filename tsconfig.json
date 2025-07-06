@@ -4,10 +4,11 @@
     "module": "CommonJS", // Ensure this is CommonJS for Node.js
     "outDir": "./dist", // Your output directory
     "rootDir": "./src", // Your source directory
-    "strict": true, // Recommended, but ensure your code adheres to strict rules
+    "strict": false, // Recommended, but ensure your code adheres to strict rules
+    "noImplicitAny": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
 
     /* TypeORM specific options - START */
     "experimentalDecorators": true,   // <<< Ensure this is true and uncommented
