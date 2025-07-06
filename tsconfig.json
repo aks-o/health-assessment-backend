@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2016", // Or a newer target like ES2020, ESNext
+    "module": "CommonJS", // Ensure this is CommonJS for Node.js
+    "outDir": "./dist", // Your output directory
+    "rootDir": "./src", // Your source directory
+    "strict": true, // Recommended, but ensure your code adheres to strict rules
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* TypeORM specific options - START */
+    "experimentalDecorators": true,   // <<< Ensure this is true and uncommented
+    "emitDecoratorMetadata": true,    // <<< Ensure this is true and uncommented
+    /* TypeORM specific options - END */
+  },
+  "include": ["src/**/*"], // Ensure this includes your source files
+  "exclude": ["node_modules", "dist"] // Ensure this excludes node_modules and dist
+}
