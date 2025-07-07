@@ -1,0 +1,93 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 0; /* Base padding */
+  background: transparent; /* Making background transparent to prevent white strips */
+}
+
+/* Add padding for all routes except homepage */
+.main-content > *:not(.home-page) {
+  padding-top: 60px; /* Default padding for non-home pages */
+}
+
+.main-content--home {
+  padding-top: 0; /* No padding for the homepage */
+}
+
+/* Container for consistent spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section spacing */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 0; /* Keep consistent with base styles */
+  }
+  
+  .main-content--home {
+    padding-top: 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 0; /* Keep consistent with base styles */
+  }
+  
+  .main-content--home {
+    padding-top: 0;
+  }
+  
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+} 

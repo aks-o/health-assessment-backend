@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: healthconnect-backend
+    env: node
+    buildCommand: cd health-assessment-backend && npm install
+    startCommand: cd health-assessment-backend && node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+    healthCheckPath: /api/health

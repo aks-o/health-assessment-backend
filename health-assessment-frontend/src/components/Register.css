@@ -1,0 +1,320 @@
+.register-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.doctor-register-card,
+.medicine-center-register-card {
+  height: 480px; /* Increased height for more space */
+  width: 100%;
+  max-width: 100%;
+  min-width: unset;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 24px;
+}
+
+.register-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(25, 118, 210, 0.07);
+  padding: 1.5rem 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 480px;
+  max-height: 680px;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.register-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1976d2;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.register-header h1 {
+  color: #2d3748;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.register-header p {
+  color: #718096;
+  font-size: 1rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem; /* Slightly reduced gap for compactness */
+}
+
+@media (max-width: 700px) {
+  .register-card {
+    padding: 1.2rem 0.5rem;
+    max-width: 97vw;
+    min-width: unset;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  padding: 0.6rem 0.7rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.97rem;
+  transition: all 0.3s ease;
+  background: #fff !important; /* Pure white for max contrast */
+  color: #1a202c !important; /* Even darker text */
+}
+
+.form-group input:disabled, .form-group textarea:disabled, .form-group select:disabled {
+  background: #e2e8f0 !important;
+  color: #a0aec0 !important;
+}
+
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill,
+.form-group select:-webkit-autofill {
+  -webkit-text-fill-color: #2d3748 !important;
+  box-shadow: 0 0 0 1000px #f7fafc inset !important;
+  background: #f7fafc !important;
+  color: #2d3748 !important;
+}
+
+.form-group input::-webkit-input-placeholder,
+.form-group textarea::-webkit-input-placeholder,
+.form-group select::-webkit-input-placeholder {
+  color: #4a5568 !important;
+  opacity: 1 !important;
+}
+.form-group input:-moz-placeholder,
+.form-group textarea:-moz-placeholder,
+.form-group select:-moz-placeholder {
+  color: #4a5568 !important;
+  opacity: 1 !important;
+}
+.form-group input::-moz-placeholder,
+.form-group textarea::-moz-placeholder,
+.form-group select::-moz-placeholder {
+  color: #4a5568 !important;
+  opacity: 1 !important;
+}
+.form-group input:-ms-input-placeholder,
+.form-group textarea:-ms-input-placeholder,
+.form-group select:-ms-input-placeholder {
+  color: #4a5568 !important;
+  opacity: 1 !important;
+}
+
+/* For custom dropdowns (e.g. react-select, autocomplete) */
+.Select__control, .react-select__control, .CityAutocomplete input, .SpecialtyDropdown select {
+  background: #f7fafc !important;
+  color: #2d3748 !important;
+}
+.Select__input, .react-select__input {
+  color: #2d3748 !important;
+}
+.Select__placeholder, .react-select__placeholder {
+  color: #4a5568 !important;
+  opacity: 1 !important;
+}
+
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill,
+.form-group select:-webkit-autofill {
+  -webkit-text-fill-color: #2d3748 !important;
+  box-shadow: 0 0 0 1000px #f7fafc inset;
+}
+
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.form-group select::placeholder {
+  color: #4a5568;
+  opacity: 1;
+}
+
+.submit-btn {
+  background: #1976d2;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #1565c0;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(25,118,210,0.16);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.message.success {
+  background: #e8f5e9;
+  color: #43a047;
+  border-left: 4px solid #43a047;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 600;
+
+  background: #c6f6d5;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+}
+
+.message.error {
+  background: #ffeaea;
+  color: #e57373;
+  border-left: 4px solid #e57373;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 600;
+
+  background: #fed7d7;
+  color: #742a2a;
+  border: 1px solid #feb2b2;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 2rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #764ba2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .register-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 1rem;
+  }
+  
+  .register-card {
+    padding: 1.5rem;
+  }
+  
+  .register-header h1 {
+    font-size: 1.5rem;
+  }
+} 

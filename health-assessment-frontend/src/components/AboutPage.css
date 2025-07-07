@@ -1,0 +1,133 @@
+/* New completely restructured About Page CSS */
+.about-page {
+  width: 100%;
+}
+
+/* Separate section for the heading with clear spacing */
+.about-heading-section {
+  padding: 120px 20px 0px 20px; /* Large top padding to clear the header */
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 5; /* Ensure it's above other content */
+}
+
+.about-heading-section h1 {
+  font-size: 2.5rem;
+  color: #0096c7;
+  margin-bottom: 35px; /* Changed padding direction to bottom instead of top */
+  margin-top: 0; /* Remove top margin */
+  padding-top: 0; /* Remove top padding */
+  font-weight: 700;
+  display: block;
+}
+
+.about-container {
+  padding: 20px 20px 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-header {
+  margin-bottom: 50px;
+}
+
+/* Single line container for the description */
+.single-line-container {
+  width: 100%;
+  overflow: visible;
+  margin: 0 auto;
+  max-width: 1000px; /* Very wide to ensure text stays on one line */
+}
+
+.single-line-container p {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  white-space: nowrap; /* Forces text to stay on one line */
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 300px;
+  margin: 15px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #0096c7;
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.feature-link {
+  color: #0096c7;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.feature-link:hover {
+  color: #48cae4;
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding-top: 100px;
+  }
+  
+  .features-container {
+    flex-direction: column;
+  }
+  
+  .feature-card {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding-top: 80px;
+  }
+  
+  .about-header h1 {
+    font-size: 2rem;
+  }
+}
